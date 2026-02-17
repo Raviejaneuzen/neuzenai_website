@@ -308,7 +308,7 @@ html {
 .products-hero-right {
     flex: 0 0 65%;
     max-width: 65%;
-    background: url('/generative-ai2.jpg') center/cover no-repeat !important;
+    background: url('/products2.png') center/cover no-repeat !important;
     filter: brightness(0.85);
     display: flex;
     flex-direction: column;

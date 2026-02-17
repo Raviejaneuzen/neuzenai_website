@@ -64,28 +64,21 @@
 
 .logo-wrapper {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-  padding: 4px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0px;
+  padding: 2px 0;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
 .logo-wrapper:hover {
-  transform: translateX(2px);
-}
-
-.logo-divider {
-  width: 1.5px;
-  height: 26px;
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.3), transparent);
-  margin: 0 4px;
+  transform: translateY(-1px);
 }
 
 .navbar-logo-img {
-  height: 32px;
+  height: 38px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.1));
@@ -96,24 +89,37 @@
   transform: scale(1.05);
 }
 
-.powered-by-wrapper {
+.navbar-floating-badge {
+  position: absolute;
+  bottom: -22px;
+  left: 80px;
+  background: rgba(15, 15, 15, 0.85);
+  padding: 5px 14px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 69, 0, 0.3);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 0px;
-  margin-top: 0;
-  line-height: 1.1;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+}
+
+.navbar-scroll-container:hover .navbar-floating-badge {
+  bottom: -25px;
+  border-color: rgba(255, 69, 0, 0.6);
+  box-shadow: 0 6px 16px rgba(255, 69, 0, 0.2);
 }
 
 .powered-small {
-  font-size: 8px;
+  font-size: 7px;
   font-weight: 500;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   font-family: 'Inter', sans-serif;
-  margin-bottom: -2px;
 }
 
 .z-ninth-big {
@@ -121,7 +127,7 @@
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   font-family: 'Montserrat', sans-serif;
   display: inline-block;
   white-space: nowrap;
@@ -135,13 +141,14 @@
   color: transparent;
 
   animation: orangeFlow 3s linear infinite;
-  filter: drop-shadow(0 0 4px rgba(255, 69, 0, 0.2));
-  transition: all 0.3s ease;
 }
 
-.logo-wrapper:hover .z-ninth-big {
-  filter: drop-shadow(0 0 8px rgba(255, 69, 0, 0.5));
-  letter-spacing: 1.5px;
+@media (max-width: 991px) {
+  .navbar-floating-badge {
+    left: 20px;
+    bottom: -12px;
+    padding: 3px 8px;
+  }
 }
 
 .z-letter {
@@ -619,15 +626,12 @@
   }
 
   .logo-wrapper {
-    gap: 10px;
+    gap: 0px;
   }
 
-  .powered-by-wrapper {
-    margin-top: 0;
-  }
-
-  .logo-divider {
-    height: 20px;
+  .navbar-floating-badge {
+    left: 15px;
+    bottom: -10px;
   }
 
   .navbar-logo-img {

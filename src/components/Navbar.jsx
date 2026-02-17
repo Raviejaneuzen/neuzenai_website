@@ -103,19 +103,6 @@ const Navbar = () => {
         >
           <div className="logo-wrapper">
             <img src="/logo.png" alt="NeuZenAI" className="navbar-logo-img" />
-            <div className="logo-divider"></div>
-            <div className="powered-by-wrapper">
-              <span className="powered-small">powered by</span>
-              <span className="z-ninth-big">
-                <span className="z-letter">z</span>
-                <span className="z-letter">-</span>
-                <span className="z-letter">n</span>
-                <span className="z-letter">i</span>
-                <span className="z-letter">n</span>
-                <span className="z-letter">t</span>
-                <span className="z-letter">h</span>
-              </span>
-            </div>
           </div>
         </Link>
 
@@ -210,6 +197,20 @@ const Navbar = () => {
             </svg>
           )}
         </button>
+      </div>
+
+      {/* Floating Brand Badge */}
+      <div className="navbar-floating-badge">
+        <span className="powered-small">powered by</span>
+        <span className="z-ninth-big">
+          <span className="z-letter">z</span>
+          <span className="z-letter">-</span>
+          <span className="z-letter">n</span>
+          <span className="z-letter">i</span>
+          <span className="z-letter">n</span>
+          <span className="z-letter">t</span>
+          <span className="z-letter">h</span>
+        </span>
       </div>
 
       {/* Mobile Menu */}
