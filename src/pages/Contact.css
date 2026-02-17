@@ -1,0 +1,555 @@
+/* Contact Page V2 Styles */
+.contact-page {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+  padding-top: 100px;
+}
+
+/* Header Section */
+.contact-header-section {
+  padding: 60px 0 40px;
+}
+
+.contact-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ff4500 !important;
+  margin-bottom: 24px;
+}
+
+.contact-sub-title {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Main Form Card Section */
+.contact-main-section {
+  padding: 20px 0 80px;
+}
+
+.contact-card-wrapper {
+  position: relative;
+  background: transparent;
+  border-radius: 22px;
+  padding: 3px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+  /* Moved here */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  min-height: 480px;
+}
+
+.contact-card-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250%;
+  /* Large enough to cover */
+  height: 250%;
+  background: conic-gradient(transparent, transparent, transparent, #ff4500);
+  animation: rotate 4s linear infinite;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contact-card-wrapper:hover {
+  transform: scale(1.02);
+  /* Zoom in */
+}
+
+.contact-card-wrapper:hover::before {
+  opacity: 1;
+}
+
+.contact-card-v2 {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  /* box-shadow removed from here */
+  overflow: hidden;
+  height: 100%;
+}
+
+.contact-card-left {
+  flex: 0 0 40%;
+  background: #ff4500;
+  /* Brand Orange */
+  color: #fff;
+  padding: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-left-content {
+  position: relative;
+  z-index: 2;
+}
+
+.card-left-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.card-left-desc {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.schedule-btn {
+  display: inline-block;
+  text-decoration: none;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.schedule-btn:hover {
+  background: #fff;
+  color: #ff4500;
+}
+
+/* Decorative Circles */
+.corner-circles {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 350px;
+  height: 350px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  bottom: 0;
+  right: 0;
+}
+
+.circle-2 {
+  width: 220px;
+  height: 220px;
+  bottom: 60px;
+  right: 60px;
+}
+
+/* Form Right Side */
+.contact-card-right {
+  flex: 1;
+  padding: 40px;
+}
+
+.contact-form-v2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row-compact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group-compact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group-compact label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #444;
+}
+
+.form-group-compact input,
+.form-group-compact select,
+.form-group-compact textarea {
+  padding: 12px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background: #fdfdfd;
+}
+
+.form-group-compact input:focus,
+.form-group-compact select:focus,
+.form-group-compact textarea:focus {
+  outline: none;
+  border-color: #2d318e;
+  box-shadow: 0 0 0 4px rgba(45, 49, 142, 0.05);
+}
+
+.form-submit-row {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-submit-btn {
+  background: #ff4500;
+  color: #fff;
+  border: none;
+  padding: 14px 60px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-submit-btn:hover {
+  background: #e63e00;
+}
+
+/* Offices Section */
+#offices-heading,
+#testimonials-heading,
+#brands-heading {
+  color: #ff4500 !important;
+}
+
+.offices-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.office-card {
+  position: relative;
+  background: transparent;
+  border-radius: 16px;
+  padding: 40px;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.office-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, transparent, transparent, #ff4500);
+  animation: rotate 4s linear infinite;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.office-card::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  background: #f8f9fa;
+  border-radius: 13px;
+  z-index: -1;
+}
+
+.office-card:hover {
+  transform: scale(1.05);
+  /* Zoom in */
+}
+
+.office-card:hover::before {
+  opacity: 1;
+}
+
+.office-card>* {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.office-city {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #ff4500;
+}
+
+.office-address {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.map-link {
+  display: inline-block;
+  color: #ff6b35;
+  /* Orange link */
+  font-weight: 700;
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+
+.map-link:hover {
+  text-decoration: underline;
+}
+
+.office-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 24px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+.contact-item svg {
+  color: #666;
+}
+
+/* Testimonials Section */
+.testimonial-v2-container {
+  position: relative;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.testimonial-quote-icon {
+  font-size: 8rem;
+  color: #ff6b35;
+  opacity: 0.15;
+  position: absolute;
+  top: -20px;
+  left: 40px;
+  font-family: serif;
+  line-height: 1;
+}
+
+.testimonial-content-box {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.testimonial-text {
+  font-size: 1.3rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 32px;
+  font-style: italic;
+}
+
+.author-name {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ff4500;
+  margin-bottom: 4px;
+}
+
+.author-title {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.testimonial-nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  right: -30px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.nav-btn {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+/* Brands Section Container */
+.brands-section {
+  background-color: #fff5f0 !important;
+  color: #1a1a1a !important;
+  padding: 40px 0 !important;
+}
+
+/* Brands Marquee Styles */
+.brands-marquee {
+  overflow: hidden;
+  padding: 10px 0;
+  /* Reduced vertical padding */
+  position: relative;
+  width: 100%;
+}
+
+.brands-marquee::before,
+.brands-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brands-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #fff5f0, transparent);
+}
+
+.brands-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #fff5f0, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.brand-logo-item {
+  flex: 0 0 auto;
+  width: 300px;
+  /* Increased from 200px */
+  height: 120px;
+  /* Increased from 80px */
+  margin: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.brand-logo-item:hover .brand-logo-img {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-400px * 4));
+    /* Width(300) + Margin(50*2) times number of unique logos */
+  }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .contact-card-v2 {
+    flex-direction: column;
+  }
+
+  .contact-card-left {
+    flex: 0 0 auto;
+    padding: 40px;
+  }
+
+  .card-left-title {
+    font-size: 2.2rem;
+  }
+
+  .contact-card-right {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-main-title {
+    font-size: 2.5rem;
+  }
+
+  .offices-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-nav {
+    display: none;
+  }
+
+  .testimonial-text {
+    font-size: 1.1rem;
+  }
+}
+
+.submission-success {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.submission-success h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,295 @@
+/* Mobile Responsive Styles for NeuZenAI */
+
+/* Breakpoint for Tablets & Phones (General Mobile) */
+@media (max-width: 991px) {
+
+    /* Global Container Adjustments */
+    .container,
+    .container-fluid,
+    .container-custom-wide,
+    .footer-inner {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Navbar Adjustments */
+    .navbar-scroll-container {
+        left: 20px !important;
+        right: 20px !important;
+        top: 10px !important;
+    }
+
+    .navbar-scroll-bg-default,
+    .navbar-scroll-bg-scrolled {
+        padding: 12px 25px !important;
+    }
+
+    .navbar-scroll-logo {
+        font-size: 24px !important;
+    }
+
+    /* Homepage Styles */
+    .home-hero-title {
+        font-size: 2.8rem !important;
+    }
+
+    .homepage-services-grid,
+    .homepage-industries-grid,
+    .home-testimonials-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+    }
+
+    .homepage-service-card,
+    .homepage-industry-card,
+    .home-testimonial-card {
+        min-height: auto !important;
+        padding: 25px 20px !important;
+    }
+
+    .home-testimonial-quote {
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .home-testimonial-metrics {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .home-testimonial-company-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+
+    .home-testimonial-industry {
+        margin-left: 0 !important;
+        font-size: 0.85rem !important;
+    }
+
+    .homepage-story-content {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .homepage-story-visual {
+        order: 2;
+    }
+
+    .homepage-story-text {
+        order: 1;
+        text-align: center;
+        max-width: 100% !important;
+    }
+
+    .homepage-story-title {
+        font-size: 2.2rem !important;
+    }
+
+    .home-stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Fixed Impact and Values Grids */
+    .brand-impact-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px !important;
+    }
+
+    .home-values-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    /* Trusted Orgs Mobile */
+    .trusted-orgs-container {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 30px !important;
+    }
+
+    .trusted-orgs-container img {
+        margin: 10px !important;
+        max-width: 40% !important;
+        /* Ensure 2 per row roughly */
+        height: auto !important;
+        max-height: 50px !important;
+    }
+
+    /* About Us Page Styles */
+    .about-title {
+        font-size: 2.8rem !important;
+    }
+
+    .who-we-are-centered {
+        max-width: 100% !important;
+        padding: 0 15px !important;
+    }
+
+    .who-we-are-title {
+        font-size: 2.4rem !important;
+    }
+
+    .mission-highlight-row {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .mission-title {
+        font-size: 2.4rem !important;
+        text-align: center;
+    }
+
+    .mission-main-description {
+        text-align: center;
+        margin: 0 auto 30px !important;
+    }
+
+    .about-detail-row,
+    .about-detail-row.reverse {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        margin-bottom: 50px !important;
+    }
+
+    .about-detail-image {
+        order: 2 !important;
+    }
+
+    .about-detail-text {
+        order: 1 !important;
+        text-align: center;
+    }
+
+    .about-detail-title {
+        font-size: 2.2rem !important;
+    }
+
+    .about-detail-description {
+        margin: 0 auto !important;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .offices-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Footer Mobile Adjustments */
+    .footer-container {
+        background-color: #F8F9FA;
+        border-top-left-radius: 40px !important;
+        border-top-right-radius: 40px !important;
+    }
+
+    .footer-brand-title {
+        font-size: 80px !important;
+        margin-bottom: 30px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    .footer-locations-card {
+        flex-direction: column !important;
+        padding: 30px 20px !important;
+        gap: 30px !important;
+    }
+
+    .footer-map-container {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .footer-locations-list {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .footer-bottom-links {
+        gap: 15px !important;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Specific for Phones (iPhone / Android) */
+@media (max-width: 480px) {
+
+    .home-hero-title,
+    .about-title {
+        font-size: 2.2rem !important;
+    }
+
+    .homepage-main-title {
+        font-size: 2rem !important;
+    }
+
+    .homepage-main-description,
+    .about-hero p {
+        font-size: 1rem !important;
+    }
+
+    .home-stats-grid,
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .btn,
+    .homepage-story-cta {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .homepage-highlight-item {
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 15px !important;
+    }
+
+    .who-we-are-title,
+    .mission-title {
+        font-size: 1.8rem !important;
+    }
+
+    .who-we-are-description {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .mission-point-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mission-point-icon-box {
+        margin-bottom: 12px;
+    }
+
+    .footer-brand-title {
+        font-size: 60px !important;
+    }
+}
+
+/* Very Small Devices (iPhone SE, etc.) */
+@media (max-width: 350px) {
+    .navbar-scroll-logo {
+        font-size: 18px !important;
+    }
+
+    .home-hero-title {
+        font-size: 1.8rem !important;
+    }
+}

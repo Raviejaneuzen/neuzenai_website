@@ -1,0 +1,171 @@
+/* Mobile Responsive Styles for Products Page */
+
+/* Tablet & Mobile (max-width: 991px) */
+@media (max-width: 991px) {
+
+    /* --- Hero Section --- */
+    .products-hero-v2 {
+        min-height: auto !important;
+        padding-top: 120px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .products-hero-watermark {
+        font-size: 18vw;
+        top: 40%;
+    }
+
+    .tech-ring {
+        display: none !important;
+        /* Simplified for mobile */
+    }
+
+    .products-hero-title {
+        font-size: 3.5rem !important;
+        line-height: 1.1 !important;
+        text-align: center;
+    }
+
+    .products-hero-v2 .max-w-3xl {
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products-hero-v2 .h-\[2px\].w-20 {
+        margin: 0 auto;
+    }
+
+    /* Hide quote/statement on smaller screens as in JSX hidden lg:block, but ensuring here */
+
+    /* --- Products Zig-Zag List --- */
+    .products-zig-zag-section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .flex.flex-col.gap-40 {
+        gap: 60px !important;
+        /* Reduced vertical gap between products */
+    }
+
+    /* Force Stack Order */
+    .flex-col-reverse-mobile {
+        flex-direction: column-reverse !important;
+    }
+
+    /* Override flex-row to column for all products */
+    .flex.flex-col.md\:flex-row {
+        flex-direction: column !important;
+        gap: 2rem !important;
+    }
+
+    /* Image Container */
+    .w-full.md\:w-1\/2 {
+        width: 100% !important;
+    }
+
+    /* Ensure Image is always FIRST or SECOND? 
+       Usually on mobile: Image then Text is standard.
+       But original code had swapping logic. 
+       We must override the `order-1` `order-2` classes from JSX if we want consistent Mobile-First layout.
+    */
+    .order-1,
+    .order-2,
+    .md\:order-1,
+    .md\:order-2 {
+        order: unset !important;
+    }
+
+    /* We want Image top, Text bottom for all. */
+    .w-full.md\:w-1\/2.group {
+        order: 1 !important;
+        /* Image container */
+    }
+
+    .w-full.md\:w-1\/2.flex.flex-col {
+        order: 2 !important;
+        /* Text container */
+    }
+
+
+    /* Text Styling */
+    .flex.flex-col.items-start.text-left {
+        align-items: center !important;
+        text-align: center !important;
+        padding: 2rem !important;
+        background-color: #ffffff;
+        border: 2px solid #ff4500;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(255, 69, 0, 0.2);
+        width: 100%;
+        position: relative;
+    }
+
+    .border-l-4.border-\[\#ff4500\].pl-6 {
+        border-left: none !important;
+        border-bottom: 4px solid #ff4500;
+        padding-left: 0 !important;
+        padding-bottom: 1rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+
+    .text-4xl.font-bold {
+        font-size: 2.5rem !important;
+        text-align: center;
+    }
+
+    .text-lg.font-semibold {
+        text-align: center;
+    }
+
+    .flex.flex-wrap.gap-3 {
+        justify-content: center;
+    }
+
+    /* Link Glow Center */
+    .link-glow {
+        margin: 0 auto;
+    }
+
+    /* --- Why Choose Us Flip Cards --- */
+    .pt-20.pb-40 {
+        padding-top: 40px !important;
+        padding-bottom: 80px !important;
+    }
+
+    .grid-cols-1.md\:grid-cols-3 {
+        gap: 30px !important;
+    }
+
+    .flip-card {
+        max-width: 320px;
+        margin: 0 auto;
+        height: 200px !important;
+    }
+
+    .products-hero-title-right {
+        font-size: 2.8rem !important;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .products-hero-subtitle-right {
+        font-size: 1.1rem !important;
+        text-align: center;
+        max-width: 100% !important;
+    }
+}
+
+/* Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .products-hero-title {
+        font-size: 2.8rem !important;
+    }
+
+    .flip-card {
+        width: 100%;
+    }
+}

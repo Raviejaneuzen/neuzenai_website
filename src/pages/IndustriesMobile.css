@@ -1,0 +1,247 @@
+/* Mobile Responsive Styles for Industries Page */
+
+/* Tablet & Mobile (max-width: 991px) */
+@media (max-width: 991px) {
+
+    .industries-page {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* --- Hero Section (Side-by-Side like About Us) --- */
+    .industries-new-hero {
+        flex-direction: row !important;
+        height: 50vh !important;
+        min-height: 400px !important;
+        position: relative;
+        display: flex !important;
+    }
+
+    /* Left Panel */
+    .hero-left-panel {
+        flex: 0 0 45% !important;
+        max-width: 45% !important;
+        width: 45% !important;
+        padding: 20px 10px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        /* Center vertically? */
+        text-align: left !important;
+        background: transparent !important;
+        /* Ensure no white bg blocking if needed */
+        z-index: 5;
+    }
+
+    .hero-title-wrapper {
+        margin-right: 0 !important;
+        width: 100%;
+        max-width: 100% !important;
+    }
+
+    .hero-title-wrapper h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.1;
+        text-align: left !important;
+    }
+
+    .orange-accent-line {
+        display: none !important;
+        /* Hide for cleaner look on mobile */
+    }
+
+    /* Right Panel */
+    .hero-right-panel {
+        flex: 0 0 55% !important;
+        max-width: 55% !important;
+        width: 55% !important;
+        padding: 20px 10px 20px 20px !important;
+        /* Little left padding */
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: left !important;
+        background: transparent !important;
+    }
+
+    .hero-right-content {
+        max-width: 100% !important;
+    }
+
+    .industries-hero-right-content h2 {
+        font-size: 2rem !important;
+        margin-bottom: 1rem !important;
+        text-align: left !important;
+    }
+
+    .industries-hero-right-content p {
+        font-size: 0.95rem !important;
+        margin-bottom: 1rem !important;
+        line-height: 1.4 !important;
+        text-align: left !important;
+        color: #ffffff !important;
+        max-width: 100% !important;
+    }
+
+    .hero-contact-link {
+        font-size: 0.9rem !important;
+    }
+
+    /* Center Image (Overlaid in middle/bottom) */
+    .hero-center-image-container {
+        position: absolute !important;
+        left: 20% !important;
+        /* Shifted left slightly to sit between panels */
+        transform: none !important;
+        bottom: 0 !important;
+        width: auto !important;
+        height: 50% !important;
+        /* Reduced size */
+        z-index: 10 !important;
+        display: flex !important;
+        /* Ensure visible */
+        justify-content: center;
+        pointer-events: none;
+    }
+
+    .hero-person-image {
+        /* Assuming there is an image inside .hero-center-image-container, 
+           User's code showed <div className="hero-center-image-container"></div> empty in the prompt, 
+           but CSS shows .hero-person-image inside it. 
+           Wait, the snippet in prompt shows EMPTY container: <div className="hero-center-image-container"></div>
+           If it's empty, no image will show. 
+           Let's check if the user *wants* an image or just the layout. 
+           The user said "how you displaying the about us... these section same like display".
+           The About Us had an image. If Industries has no image in JSX, this container is invisible.
+           I will assume the CSS handles background or the user might update JSX later. 
+           But purely for CSS, I'll style the container.
+        */
+        height: 100% !important;
+        width: auto !important;
+        max-width: none !important;
+    }
+
+    /* Ensure Tech Pattern Overlay is visible/sized correctly */
+    .tech-pattern-overlay {
+        opacity: 0.4 !important;
+    }
+
+    /* --- Overview Section --- */
+    .overview-section {
+        padding: 40px 0 !important;
+    }
+
+    .overview-container {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 0 20px !important;
+    }
+
+    .overview-title {
+        font-size: 2rem !important;
+        text-align: center !important;
+    }
+
+    .overview-text p {
+        font-size: 0.95rem !important;
+        text-align: justify !important;
+    }
+
+    /* --- Industries Grid --- */
+    .industries-serve-section {
+        padding: 40px 0 !important;
+    }
+
+    .industries-serve-title {
+        font-size: 2rem !important;
+        margin-bottom: 40px !important;
+    }
+
+    .industries-grid-new {
+        gap: 30px !important;
+    }
+
+    .industry-item-new,
+    .industry-item-new:nth-child(even) {
+        flex-direction: column !important;
+        height: auto !important;
+        margin-bottom: 0 !important;
+        gap: 0 !important;
+    }
+
+    .industry-image-side {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        height: 250px !important;
+        transform: none !important;
+        opacity: 1 !important;
+        border-radius: 20px 20px 0 0 !important;
+        margin: 0 !important;
+    }
+
+    .industry-content-side {
+        flex: 0 0 auto !important;
+        width: 100% !important;
+        transform: none !important;
+        opacity: 1 !important;
+        margin: 0 !important;
+        margin-top: -30px !important;
+        /* Slight overlap upwards */
+    }
+
+    .industry-card-new {
+        border-radius: 20px !important;
+        padding: 25px !important;
+    }
+
+    .industry-card-new h3 {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .industry-card-new p {
+        text-align: center !important;
+    }
+
+    /* --- Contact Section --- */
+    .industry-contact-section {
+        padding: 40px 0 !important;
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        padding: 0 20px !important;
+    }
+
+    .contact-text {
+        padding-top: 0 !important;
+    }
+
+    .contact-text h2 {
+        font-size: 1.3rem !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+        padding: 0 10px !important;
+        font-weight: 700 !important;
+    }
+
+    .contact-image {
+        height: 200px !important;
+        margin-top: 20px !important;
+    }
+
+    .contact-form {
+        padding: 20px !important;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+    }
+
+    .submit-btn {
+        width: 100% !important;
+    }
+}

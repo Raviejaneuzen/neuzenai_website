@@ -1,0 +1,210 @@
+/* Mobile Responsive Styles for Success Stories Page */
+
+/* Tablet & Mobile (max-width: 991px) */
+@media (max-width: 991px) {
+    .case-studies-page {
+        padding-top: 80px !important;
+        overflow-x: hidden;
+    }
+
+    /* --- Hero Section --- */
+    .cs-hero {
+        padding-bottom: 20px !important;
+        padding-top: 40px !important;
+    }
+
+    .cs-hero-title {
+        font-size: 2.5rem !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+        margin-top: 1rem !important;
+    }
+
+    .cs-hero-desc {
+        text-align: center !important;
+        font-size: 1.1rem !important;
+    }
+
+    .breadcrumbs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem !important;
+    }
+
+    .stories-hero-title-right {
+        font-size: 2.8rem !important;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .stories-hero-subtitle-right {
+        font-size: 1.1rem !important;
+        text-align: center;
+        max-width: 100% !important;
+    }
+
+    .flex-col.items-start {
+        align-items: center !important;
+        /* Center hero content */
+    }
+
+    /* --- Story Cards --- */
+    .cs-stories {
+        padding-top: 20px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .story-card-v2 {
+        flex-direction: column !important;
+        gap: 30px !important;
+        margin-bottom: 40px;
+    }
+
+    /* Reverse logic for mobile: Always Author then Quote, or Quote then Author? 
+       Typically content flow is better if uniform. 
+       The JSX has `index % 2 === 1 ? 'md:flex-row-reverse' : ''`.
+       On mobile, we just want `flex-direction: column`.
+       So we ensure no reverse exists on mobile.
+    */
+    .md\:flex-row-reverse {
+        flex-direction: column !important;
+    }
+
+    /* --- Authors Layout --- */
+    .author-benefits-card-v2 {
+        min-height: auto !important;
+        padding: 2.5rem 1.5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .author-header {
+        text-align: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Category at top */
+    .cs-category-v2 {
+        text-align: center;
+        font-size: 0.8rem !important;
+        color: #888 !important;
+        margin-bottom: 2rem !important;
+        letter-spacing: 2px !important;
+        order: -1;
+        /* Ensure it appears first */
+    }
+
+    .author-profile-row {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        text-align: center;
+        margin-top: 0 !important;
+    }
+
+    .cs-profile-img-v2 {
+        width: 100px !important;
+        height: 100px !important;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .cs-author-name-v2 {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.2rem !important;
+    }
+
+    .benefits-section-v2 {
+        margin-top: 2.5rem !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cs-benefits-title-v2 {
+        text-align: center;
+        font-size: 0.9rem !important;
+        color: #ff4500 !important;
+        margin-bottom: 1.5rem !important;
+        letter-spacing: 1px !important;
+    }
+
+    .benefits-grid-v2 {
+        /* Single column for benefits */
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .benefit-bar-item-v2 {
+        justify-content: flex-start !important;
+        padding: 1rem 1.25rem !important;
+        background: #fff;
+        border: 1px solid #f0f0f0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    /* --- Quote Layout --- */
+    .quote-card-v2 {
+        min-height: auto !important;
+        padding: 3rem 1.5rem !important;
+        text-align: center;
+    }
+
+    .quote-icon-v2 {
+        font-size: 3rem !important;
+    }
+
+    .quote-icon-v2.top {
+        left: 1rem !important;
+        top: 1rem !important;
+    }
+
+    .quote-icon-v2.bottom {
+        right: 1rem !important;
+        bottom: 0.5rem !important;
+    }
+
+    .quote-text-v2 {
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+    }
+
+    .linkedin-link-v2 {
+        bottom: 1rem !important;
+        right: 1rem !important;
+    }
+
+    /* --- Stats Section --- */
+    .cs-stats {
+        padding: 40px 0 !important;
+    }
+
+    .cs-benefits-title {
+        text-align: center !important;
+        font-size: 2rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .cs-stat-card {
+        margin: 0 auto 1rem;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .cs-hero-title {
+        font-size: 2rem !important;
+    }
+
+    .quote-text-v2 {
+        font-size: 1rem !important;
+    }
+
+    .cs-stat-number {
+        font-size: 2.2rem !important;
+    }
+}

@@ -1,0 +1,338 @@
+/* Mobile Responsive Styles for About Us Page */
+
+/* Tablet & Mobile (max-width: 991px) */
+@media (max-width: 991px) {
+
+    /* --- General Container --- */
+    .about-page-v2 {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* --- Hero Section Side-by-Side Mobile --- */
+    .about-hero-split {
+        flex-direction: row !important;
+        height: 50vh !important;
+        min-height: 400px !important;
+        position: relative;
+    }
+
+    .about-hero-left {
+        flex: 0 0 40% !important;
+        max-width: 40% !important;
+        width: 40% !important;
+        padding: 20px 10px !important;
+        justify-content: center !important;
+        text-align: left !important;
+        align-items: center !important;
+    }
+
+    .about-hero-right {
+        flex: 0 0 60% !important;
+        max-width: 60% !important;
+        width: 60% !important;
+        padding: 20px 15px !important;
+        background-position: center !important;
+        text-align: left !important;
+        justify-content: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .about-hero-content-left {
+        margin-bottom: 0 !important;
+        width: 100%;
+        position: relative;
+        z-index: 5;
+    }
+
+    .about-hero-content-right {
+        padding-left: 35px !important;
+        /* Adjusted for image moving further right */
+        width: 100%;
+        position: relative;
+        z-index: 5;
+    }
+
+    .about-hero-person-wrapper {
+        position: absolute !important;
+        left: 45% !important;
+        /* Moved further right on mobile */
+        transform: translateX(-50%) !important;
+        bottom: 0 !important;
+        height: 45% !important;
+        /* Adjust height to fit mobile screen */
+        margin: 0 !important;
+        z-index: 10 !important;
+        display: block !important;
+        width: auto !important;
+    }
+
+    .about-hero-person-img {
+        max-width: none !important;
+        /* Allow image to maintain aspect ratio */
+        height: 100% !important;
+        object-fit: contain;
+    }
+
+    .about-hero-love-text {
+        font-size: 1.8rem !important;
+        /* Reduce font size */
+        text-align: left !important;
+        line-height: 1.1;
+    }
+
+    .about-hero-title-right {
+        font-size: 2.2rem !important;
+        text-align: left !important;
+        margin-bottom: 15px !important;
+    }
+
+    .about-hero-subtitle-right {
+        font-size: 1rem !important;
+        text-align: left !important;
+        margin: 0 !important;
+        line-height: 1.5;
+        max-width: 100% !important;
+    }
+
+    .orange-bar {
+        display: none !important;
+    }
+
+    /* --- Overview & Journey --- */
+    .overview-journey-section {
+        padding: 60px 0;
+    }
+
+    .about-overview-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .about-overview-text {
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+
+    .journey-container {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 60px;
+        padding: 0;
+    }
+
+    .journey-text-box {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .journey-title-large {
+        font-size: 2.5rem;
+    }
+
+    .journey-visual {
+        width: 100%;
+    }
+
+    /* --- Vision & Mission --- */
+    .vision-mission-section {
+        padding: 60px 0;
+    }
+
+    .vm-card {
+        padding: 40px 20px;
+        margin-bottom: 20px;
+    }
+
+    .vm-title {
+        font-size: 2rem;
+    }
+
+    /* --- Core Values (ZigZag) --- */
+    .sect-corevalue {
+        padding: 60px 0;
+    }
+
+    .sect-corevalue .main {
+        flex-direction: column !important;
+        gap: 40px;
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    /* Force order for text/image stacking if needed, usually Text then Image is better on mobile, or Image then Text. 
+       Let's stick to standard stacking: Image top or Context top? 
+       Typically title/text then image is good for context.
+       BUT existing CSS (lines 709-713 in About.css) puts Content (2) then Image (1).
+       Let's just ensure they stack nicely.
+    */
+    .sect-corevalue .contentstyle,
+    .sect-corevalue .imagestyle {
+        width: 100%;
+        flex: auto;
+        order: unset !important;
+        /* Reset any flex ordering */
+        text-align: center;
+    }
+
+    .sect-corevalue .itemtwo,
+    .sect-corevalue .itemfour,
+    .sect-corevalue .itemsix,
+    .sect-corevalue .itemeight {
+        flex-direction: column !important;
+        /* Override row-reverse */
+    }
+
+    .sect-corevalue .headline,
+    .sect-corevalue .wcu-headline {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 10px;
+        line-height: 1.2;
+    }
+
+    .sect-corevalue .desc,
+    .sect-corevalue .wcu-desc {
+        text-align: center;
+        margin: 0 auto 20px;
+        padding: 0 15px;
+        display: block;
+        width: 100%;
+    }
+
+    .wcu-icon-large-container {
+        transform: scale(1) translateX(0) !important;
+        /* Disable complex transform animations on mobile */
+        opacity: 1 !important;
+        margin: 0 auto;
+        padding: 30px;
+        /* Adjust padding for smaller size */
+    }
+
+    /* --- Stats Section --- */
+    .nai-about-stats-hero {
+        height: auto;
+        padding: 80px 20px 200px;
+        background-attachment: scroll;
+        /* Fix parallax on mobile */
+    }
+
+    .nai-about-stats-content {
+        margin: 0;
+        padding-left: 20px;
+        border-left-width: 4px;
+        text-align: left;
+        max-width: 100%;
+    }
+
+    .nai-about-stats-grid-wrapper {
+        margin-top: -150px;
+        padding: 0 20px;
+    }
+
+    .nai-about-stat-card {
+        margin-bottom: 20px;
+        padding: 30px 20px;
+        opacity: 1 !important;
+        /* Ensure visible without scroll magic if needed */
+        transform: none !important;
+    }
+
+    /* --- Leaders & Life Sections --- */
+    .about-leaders-section,
+    .about-life-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-leaders-image,
+    .about-leaders-content,
+    .about-life-content,
+    .about-life-image-wrapper {
+        width: 100%;
+        height: auto;
+        min-height: 350px;
+        /* Ensure specific height for images */
+        padding: 50px 20px;
+        clip-path: none;
+        /* Remove fancy cuts */
+    }
+
+    .about-leaders-title,
+    .about-life-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .about-leaders-desc,
+    .about-life-desc {
+        text-align: center;
+        margin: 0 auto 30px;
+    }
+
+    .about-leaders-link,
+    .about-life-link {
+        margin: 0 auto;
+    }
+
+    /* --- Connect Section --- */
+    .contctmain {
+        padding: 60px 0;
+    }
+
+    .connect-title {
+        font-size: 2.5rem;
+    }
+
+    .linkcta {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .clicktoexpor {
+        width: 100%;
+        max-width: 340px;
+        justify-content: space-between;
+        /* Space out text and arrow */
+        text-align: center;
+        padding: 15px 25px !important;
+        font-size: 0.95rem !important;
+        line-height: 1.4;
+    }
+}
+
+/* Phones (max-width: 480px) */
+@media (max-width: 480px) {
+    .about-hero-love-text {
+        font-size: 2.2rem;
+    }
+
+    .about-overview-title,
+    .journey-title-large {
+        font-size: 2rem;
+    }
+
+    .wcu-icon-large-container {
+        padding: 20px;
+    }
+
+    .nai-about-stat-number {
+        font-size: 2.5rem;
+    }
+
+    .about-leaders-image,
+    .about-life-image-wrapper {
+        min-height: 250px;
+    }
+}

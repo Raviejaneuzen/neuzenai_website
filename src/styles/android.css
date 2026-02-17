@@ -1,0 +1,26 @@
+/* Android specific adjustments */
+@media screen and (max-width: 991px) {
+
+    /* Improve tap targets for Navbar links on Android */
+    .navbar-scroll-mobile-link,
+    .navbar-scroll-mobile-dropdown-item {
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Footer links spacing for better touch */
+    .footer-link-item {
+        padding: 8px 0;
+    }
+
+    /* Android usually doesn't have the same "notch" issues as iOS in the same way,
+       but usually benefits from explicitly setting touch-action on interactive elements */
+    button,
+    a,
+    input,
+    select,
+    textarea {
+        touch-action: manipulation;
+    }
+}

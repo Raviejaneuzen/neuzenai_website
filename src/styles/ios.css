@@ -1,0 +1,31 @@
+/* iOS specific adjustments */
+@media screen and (max-width: 991px) {
+
+    /* iOS Safari specific fixes */
+    .home-hero {
+        min-height: -webkit-fill-available;
+    }
+
+    body {
+        /* Ensure content doesn't get hidden behind the notch or home bar */
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+
+    /* Navbar: Account for notch */
+    .navbar-scroll-container {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    /* Footer: Account for home indicator bar */
+    .footer-container {
+        padding-bottom: calc(20px + env(safe-area-inset-bottom)) !important;
+    }
+
+    /* Smooth scrolling for mobile menu */
+    .navbar-scroll-mobile-menu {
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: calc(80px + env(safe-area-inset-bottom));
+        /* Ensure bottom items are reachable */
+    }
+}

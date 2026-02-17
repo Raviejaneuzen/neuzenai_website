@@ -1,0 +1,79 @@
+/* Preloader.css */
+.preloader-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: #000000;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.preloader-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 10;
+}
+
+.particle.orange {
+    background: #FF4500;
+    box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+}
+
+.merge-flash {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, #ffffff 10%, #FF4500 90%);
+    border-radius: 50%;
+    z-index: 20;
+    opacity: 0;
+}
+
+.preloader-text-container {
+    position: relative;
+    z-index: 30;
+    text-align: center;
+}
+
+.preloader-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    line-height: 1;
+}
+
+.text-neu {
+    color: #FF4500;
+}
+
+.text-ai {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .preloader-brand {
+        font-size: 2.5rem;
+    }
+}

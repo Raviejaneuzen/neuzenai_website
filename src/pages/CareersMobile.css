@@ -1,0 +1,149 @@
+/* Mobile Responsive Styles for Careers Page */
+
+/* Tablet & Mobile (max-width: 991px) */
+@media (max-width: 991px) {
+
+    .careers-page {
+        overflow-x: hidden;
+        padding-top: 0 !important;
+    }
+
+    /* --- Hero Section --- */
+    .careers-hero-section {
+        margin-top: 60px !important;
+        height: auto !important;
+        min-height: 250px !important;
+        background-position: center !important;
+        padding: 60px 0 !important;
+    }
+
+    .careers-hero-title {
+        font-size: 2.5rem !important;
+        text-align: center !important;
+        padding: 0 10px;
+    }
+
+    /* --- Job Listings & Search --- */
+    .job-listings-section {
+        padding: 40px 0 !important;
+    }
+
+    .job-listings-title {
+        font-size: 2rem !important;
+        padding: 0 20px;
+        line-height: 1.2 !important;
+        margin-bottom: 30px !important;
+    }
+
+    .job-search-container {
+        flex-direction: column !important;
+        gap: 15px !important;
+        padding: 0 20px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .search-bar {
+        width: 100% !important;
+    }
+
+    .search-input {
+        width: 100% !important;
+    }
+
+    .filter-dropdowns {
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .filter-dropdown {
+        width: 100% !important;
+        min-width: unset !important;
+    }
+
+    .job-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        padding: 0 20px !important;
+    }
+
+    .job-card {
+        padding: 20px !important;
+    }
+
+    /* --- Benefits Section --- */
+    .careers-benefits-new-section {
+        padding: 40px 0 !important;
+    }
+
+    .careers-benefits-new-section .flex.flex-col.md\:flex-row {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+
+    .careers-benefits-new-section .md\:w-1\/2 {
+        width: 100% !important;
+        padding: 0 20px;
+    }
+
+    /* Stack Image vs Text: Usually image first is good, or text first. 
+       Let's stick to standard flow: Image top (first div in markup) -> Content bottom.
+       The Markup is: Image Div -> Content Div. So column is fine. 
+    */
+    .careers-benefits-new-section img {
+        height: 250px !important;
+        width: 100% !important;
+    }
+
+    .careers-benefits-new-section h2,
+    .join-community-title {
+        font-size: 2rem !important;
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .careers-elite-section h2,
+    .elite-firm-title {
+        font-size: 2rem !important;
+        margin-bottom: 2rem !important;
+        text-align: center !important;
+        line-height: 1.2 !important;
+    }
+
+    .careers-elite-section .space-y-6 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center the checkmarks */
+        gap: 1.5rem !important;
+    }
+
+    .careers-elite-section .flex.items-center.gap-6 {
+        width: 100%;
+        justify-content: center;
+        /* Center individual items */
+    }
+
+    .careers-elite-section img {
+        height: 250px !important;
+        width: 100% !important;
+    }
+
+    /* --- Final CTA --- */
+    .careers-final-cta {
+        height: auto !important;
+        padding: 60px 20px !important;
+        text-align: center;
+    }
+
+    .careers-final-cta .flex-col {
+        flex-direction: column !important;
+        gap: 30px !important;
+        justify-content: center !important;
+    }
+
+    .cta-heading-large {
+        font-size: 2rem !important;
+        text-align: center !important;
+    }
+}

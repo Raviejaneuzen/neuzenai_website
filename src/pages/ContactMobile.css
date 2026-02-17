@@ -1,0 +1,171 @@
+/* Mobile Responsive Styles for Contact Us Page */
+
+/* Tablet & Mobile (max-width: 991px) */
+.mobilview {
+    display: block !important;
+    /* Ensure this class works if used */
+}
+
+@media (max-width: 991px) {
+    .contact-page {
+        padding-top: 80px;
+    }
+
+    .contact-main-title {
+        font-size: 2.8rem !important;
+        margin-bottom: 16px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .contact-sub-title {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    /* Card Wrapper adjustments */
+    .contact-card-wrapper {
+        min-height: auto !important;
+        margin: 0 10px;
+        border-radius: 16px;
+    }
+
+    /* Main Card Flex Direction */
+    .contact-card-v2 {
+        flex-direction: column !important;
+        height: auto !important;
+        border-radius: 14px;
+    }
+
+    /* Left Side - Info Panel */
+    .contact-card-left {
+        flex: 0 0 auto;
+        width: 100%;
+        padding: 40px 30px !important;
+        text-align: center;
+        /* Center content for better mobile balance */
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .card-left-title {
+        font-size: 2.2rem !important;
+        margin-bottom: 16px;
+    }
+
+    .card-left-desc {
+        font-size: 1.1rem !important;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+
+    .schedule-btn {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+
+    /* Right Side - Form Panel */
+    .contact-card-right {
+        padding: 30px 20px !important;
+        background: #ffffff;
+    }
+
+    .contact-form-v2 {
+        gap: 15px;
+    }
+
+    .form-row-compact {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    .form-group-compact input,
+    .form-group-compact select,
+    .form-group-compact textarea {
+        padding: 10px 14px;
+        font-size: 1rem;
+        /* Prevent zoom on iOS inputs */
+    }
+
+    .form-submit-row {
+        margin-top: 10px;
+    }
+
+    .form-submit-btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    /* Offices Section */
+    .offices-section {
+        padding: 40px 0;
+    }
+
+    .offices-grid {
+        grid-template-columns: 1fr !important;
+        /* Stack vertically */
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .office-card {
+        padding: 30px 20px !important;
+        border-radius: 12px;
+    }
+
+    .office-city {
+        font-size: 1.5rem !important;
+    }
+
+    /* Testimonials Section */
+    .testimonials-section {
+        padding: 40px 0;
+    }
+
+    .testimonial-v2-container {
+        padding: 30px 20px !important;
+        margin: 0 20px;
+    }
+
+    .testimonial-quote-icon {
+        font-size: 5rem;
+        top: -10px;
+        left: 20px;
+    }
+
+    .testimonial-text {
+        font-size: 1rem !important;
+        line-height: 1.6;
+    }
+
+    .testimonial-nav {
+        display: none !important;
+        /* Hide arrows on mobile if swipe logic isn't there, or keep simpler */
+    }
+
+    /* Brands Marquee */
+    .brand-logo-item {
+        width: 180px !important;
+        margin: 0 20px !important;
+    }
+}
+
+/* Smaller Phones adjustments */
+@media (max-width: 480px) {
+    .contact-main-title {
+        font-size: 2.2rem !important;
+    }
+
+    .card-left-title {
+        font-size: 1.8rem !important;
+    }
+
+    .office-city {
+        font-size: 1.4rem !important;
+    }
+
+    .schedule-btn {
+        font-size: 1rem;
+    }
+}

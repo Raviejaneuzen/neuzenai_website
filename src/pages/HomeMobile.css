@@ -1,0 +1,99 @@
+/* Mobile Responsive Adjustments for Home Page - "Isolate and fix" strategy */
+
+@media (max-width: 991px) {
+
+    /* --- Our Story Section (Center Aligned for Neat look) --- */
+    .homepage-story-section .homepage-story-text {
+        text-align: center !important;
+        align-items: center !important;
+        padding-right: 0 !important;
+    }
+
+    .homepage-story-section .homepage-story-title {
+        text-align: center !important;
+        width: 100% !important;
+        font-size: 2rem !important;
+    }
+
+    .homepage-story-section .homepage-story-description {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Align badges to the left */
+    .homepage-story-section .homepage-badge-green {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+        display: inline-flex !important;
+    }
+
+    .homepage-story-section .homepage-story-cta {
+        justify-content: center !important;
+    }
+
+    /* --- What We Do (Services) & Industries We Serve Sections (Center Aligned) --- */
+    /* Center align section headers for these sections on mobile */
+    .homepage-services-section .homepage-section-header,
+    .homepage-industries-section .homepage-section-header {
+        text-align: center !important;
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Center align Main Titles */
+    .homepage-services-section .homepage-main-title,
+    .homepage-industries-section .homepage-main-title {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    /* Center align Descriptions */
+    .homepage-services-section .homepage-main-description,
+    .homepage-industries-section .homepage-main-description {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Center align Badges in these sections */
+    .homepage-services-section .homepage-badge-green,
+    .homepage-industries-section .homepage-badge-green {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: inline-flex !important;
+    }
+
+    /* Keep Card content left aligned for readability, or remove override to let it fall back */
+    .homepage-service-card,
+    .homepage-industry-card {
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Specific overrides for smaller screens where mobile.css is very aggressive */
+
+    .homepage-story-section .homepage-highlight-item {
+        flex-direction: row !important;
+        /* Keep icon next to text */
+        align-items: flex-start !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
+    }
+
+    .homepage-story-section .homepage-story-cta {
+        width: auto !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+    }
+
+    /* Ensure center alignment for Services/Industries on very small screens */
+    .homepage-services-section .homepage-section-header,
+    .homepage-industries-section .homepage-section-header {
+        padding: 0 5px !important;
+    }
+}
