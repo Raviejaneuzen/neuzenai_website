@@ -69,14 +69,14 @@
   gap: 0px;
   line-height: 1;
   transition: all 0.3s ease;
-  margin-top: -4px;
 }
 
 .navbar-logo-img {
-  height: 28px;
+  height: 20px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
+  transform: translateX(-40px);
 }
 
 
@@ -84,48 +84,70 @@
   display: flex;
   justify-content: flex-end;
   line-height: 1;
-  margin-top: 2px;
-  position: relative;
-  z-index: 10;
+  margin-top: 0px;
+  transform: translateX(32px);
 }
 
 .powered-text-container {
   display: flex;
   align-items: baseline;
-  gap: 4px;
+  gap: 6px;
+  margin-top: 2px;
 }
 
 .powered-label {
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 700;
   color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
+  text-transform: lowercase;
+  letter-spacing: 1.5px;
   font-family: 'Outfit', sans-serif;
-  transform: translateY(-2px);
+  transform: translate(0px, -7px);
 }
 
 .z-ninth-brand {
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 900;
   font-style: italic;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-transform: lowercase;
+  letter-spacing: 0.2px;
   font-family: 'Montserrat', sans-serif;
-  color: #ff4500;
 
-  filter: drop-shadow(0 0 5px rgba(255, 69, 0, 0.2));
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* Refined horizontal and vertical falling shimmer */
+  background: linear-gradient(135deg,
+      #ff4500 0%,
+      #ff4500 40%,
+      #ffffff 50%,
+      #ff4500 60%,
+      #ff4500 100%);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: snowyFade 7s ease-in-out infinite;
+
+  filter: drop-shadow(0 0 8px rgba(255, 69, 0, 0.3));
+  transform: translateY(4px);
+  transition: all 0.3s ease;
+}
+
+@keyframes snowyFade {
+  0% {
+    background-position: 100% 0%;
+  }
+
+  100% {
+    background-position: 0% 100%;
+  }
 }
 
 .logo-wrapper:hover .navbar-logo-img {
-  transform: translateY(-1px) scale(1.02);
+  transform: translateX(-40px) scale(1.05);
 }
 
 .logo-wrapper:hover .z-ninth-brand {
   filter: drop-shadow(0 0 12px rgba(255, 69, 0, 0.6));
   letter-spacing: 0.8px;
-  transform: scale(1.05);
 }
 
 
@@ -480,16 +502,24 @@
   }
 
   .navbar-logo-img {
-    height: 22px;
+    height: 16px;
+    transform: translateX(-25px);
+  }
+
+  .powered-by-badge {
+    transform: translateX(22px);
   }
 
   .z-ninth-brand {
     font-size: 14px;
+    transform: translateY(3px);
   }
 
   .powered-label {
-    font-size: 6px;
+    font-size: 7px;
     letter-spacing: 1px;
+    transform: translate(0px, -4px);
+    color: #ffffff;
   }
 }
 
